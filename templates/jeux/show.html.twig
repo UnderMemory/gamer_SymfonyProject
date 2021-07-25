@@ -15,7 +15,7 @@
                 <!--<td>{{ jeux.id }}</td>-->
                 <td class="game-list w-25 my-5">{{ jeux.nom }}</td>
                 <td class="game-list w-50 my-5 me-5">{{ jeux.description }}</td>
-                <td class="game-list w-50 my-5 me-5">{{ note }}</td>
+                <td class="game-list w-50 my-5 me-5">Moyenne du jeu : {{ note }}</td>
 
                 <td class="game-list-liens my-5 d-flex flex-column">
                     <a class="game-list-lien" href="{{ path('jeux_edit', {'id': jeux.id}) }}">Modifier</a>
