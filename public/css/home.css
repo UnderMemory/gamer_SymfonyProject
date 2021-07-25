@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100;300;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b1e21;
+}
+
+/* Page d'accueil */
+
+.Header .header-title {
+    font-size: 42px;
+    color: lightcyan;
+    margin: auto;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+}
+
+.neon-bar {
+    height:3px;
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    background: white;
+    box-shadow: 0px 0px 20px 8px rgba(0,255,236,1);
+}
+
+.home-game {
+    width: 280px;
+    height: 700px;
+    object-fit: contain;
+}
+
+.home-texte {
+    color: lightcyan;
+    text-align: center;
+}
+
+.btn-list {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    border-color: rgba(0,255,236,1) !important;
+    color: rgba(0,255,236,1) !important;
+}
+
+.btn-list:hover {
+    background-color: rgba(0,255,236,1);
+    color: #1b1e21 !important;
+}
+
+/* Page Login */
+
+.login_title {
+    font-size: 42px;
+    color: lightcyan;
+    margin: auto;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+}
+
+.emailForm, .mdpForm {
+    font-size: 24px;
+    color: lightcyan;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Page Liste de jeux */
+
+.list-jeux-title {
+    font-size: 42px;
+    color: lightcyan;
+    margin: auto;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.list-jeux-form {
+    color: lightcyan;
+}
+
+.list-jeux-new {
+    float: right;
+    margin-right: 20px;
+    color : deepskyblue !important;
+    font-size: 18px;
+}
+
+.list-jeux-body {
+    margin-top: 100px;
+}
+
+.game-list {
+    border: none !important;
+}
+
+.game-list-liens {
+    border: none !important;
+}
+
+.game-list-lien {
+    color: deepskyblue;
+}
+
+.game-list-lien:hover {
+    color: rgba(0,255,236,1) !important;
+    text-decoration: none !important;
+}
+
+/* Page d'Edit des jeux */
+
+.edit-game-title {
+    font-size: 42px;
+    color: lightcyan;
+    margin: auto;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.edit-body {
+    margin-top: 100px;
+    color: lightcyan;
+}
+
+/* Formulaire */
+
+.label {
+    width: 250px;
+}
+
+.text-field {
+    width: 750px;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+
+/* Page Nouveau Jeux */
+
+.new-top {
+    margin-bottom: 100px;
+}
+
+.new-game {
+    font-size: 42px;
+    color: lightcyan;
+    margin: auto;
+    font-family: 'Tourney', cursive;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.new-body {
+    color: lightcyan;
+}
+
+/* Page du jeu */
+
+.show-top {
+    margin-bottom: 100px;
+}

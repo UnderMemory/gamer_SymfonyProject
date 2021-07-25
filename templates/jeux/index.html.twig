@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des jeux{% endblock %}
+
+{% block body %}
+    <div class="listJeuxTop">
+        <h1 class="list-jeux-title">Liste des jeux</h1>
+        <a href="{{ path('jeux_new') }}" class="game-list-lien list-jeux-new">Ajouter un jeu</a>
+        <div class="neon-bar mt-5"></div>
+    </div>
+
+    <div class="container">
+        <div class="list-jeux-body">
+            <table class="table">
+                <tbody>
+
+                {% for jeux in jeuxes %}
+                    <tr class="list-jeux-form d-flex flex-row">
+                        <td class="game-list w-25 my-5">{{ jeux.photo }}</td>
+                        <!--<td>{{ jeux.id }}</td>-->
+                        <td class="game-list w-25 my-5">{{ jeux.nom }}</td>
+                        <td class="game-list w-50 my-5">{{ jeux.description }}</td>
+
+                        <td class="game-list-liens my-5">
+                            <a class="game-list-lien" href="{{ path('jeux_show', {'id': jeux.id}) }}">Détails</a>
+                            <a class="game-list-lien" href="{{ path('jeux_edit', {'id': jeux.id}) }}">Modifier</a>
+                           {% if is_granted('ROLE_USER') %} <button onClick="addToList({{ jeux.id }})">Ajouter à ma liste</button> {% endif %}
+                        </td>
+                    </tr>
+
+
+                {% else %}
+
+                    <tr>
+                        <td colspan="5">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        const addToList = (id) => {
+            $.post('/user/jeux/addliste', {id: id} ).done(function (data) {
+                console.log("ok");
+            })
+        }
+    </script>
+{% endblock %}
+
+

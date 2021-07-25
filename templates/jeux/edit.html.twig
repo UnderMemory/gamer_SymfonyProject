@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Jeux{% endblock %}
+
+{% block body %}
+    <div class="editTop">
+        <h1 class="edit-game-title">Modification du jeux</h1>
+        <div class="neon-bar mt-5"></div>
+    </div>
+
+    <div class="container">
+        <div class="edit-body">
+            {{ include('jeux/_form.html.twig', {'button_label': 'Update'}) }}
+
+            <a class="game-list-lien" href="{{ path('jeux_index') }}">Retour à la liste des jeux</a>
+
+            {{ include('jeux/_delete_form.html.twig') }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}

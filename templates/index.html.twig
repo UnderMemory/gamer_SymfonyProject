@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="Header d-flex flex-column">
+            <img src="{{ asset('/images/logo.png')}}" class="mx-auto mt-5 d-block " alt="...">
+            <span class="header-title justify-content-center mt-3">Encore un nouveau site de jeux vidéo</span>
+        </div>
+
+        <div class="neon-bar mt-5"></div>
+
+        <div class="home-img d-flex flex-row justify-content-around">
+            <img src="{{ asset('/images/resident.jpg')}}" class="home-game d-block " alt="...">
+            <img src="{{ asset('/images/medium.jpg')}}" class="home-game d-block " alt="...">
+            <img src="{{ asset('/images/got.jpg')}}" class="home-game d-block " alt="...">
+        </div>
+
+        <div class="home-text">
+            <p class="home-texte">
+                Et oui, encore un ! Mais comme il n'y en a jamais réellement assez, je me suis dis "pourquoi ne pas créer le miens ?".<br/><br/>
+                Alors voici Gamer ! Mon propre site de référencement de jeux vidéos ou chaque membres du site à son importance !
+                Sur Gamer, vous pouvez partager votre avis sur différents jeux et créer ainsi une note moyenne réaliste ! <br/>
+                On ne connait que trop bien les différents site de journaliste où les avis ont l'air d'avoir été écris par des non-joueurs ... <br/><br/>
+                Chaque visiteurs pourra ainsi découvrir les jeux aux meilleurs notes, ou pas, c'est comme vous le souhaitez !<br/>
+                Membre du site, vous pourrez garder une trace de l'ensemble des jeux que vous avez notés !<br/> Ainsi gardez un historique sur votre évolution de gamer !
+            </p>
+        </div>
+
+        <button type="button" class="btn-list btn btn-outline-info d-flex justify-content-center m-auto"><a
+                    href="{{ path('jeux_index') }}">Voir la liste des jeux !</a></button>
+
+    </div>
+
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
