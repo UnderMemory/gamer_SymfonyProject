@@ -69,7 +69,7 @@ class JeuxController extends AbstractController
 
         return $this->render('jeux/show.html.twig', [
             'jeux' => $jeux,
-            'note' => $moyenne
+            'note' => $moyenne ?? "non noté"
         ]);
     }
 
