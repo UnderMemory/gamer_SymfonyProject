@@ -186,8 +186,14 @@ body {
 /* Page de liste personnelle */
 
 .jeux {
-    font-size: 28px;
+    font-size: 18px;
     color: lightcyan;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
+}
+
+.jeu-lien {
+    text-decoration: none !important;
+    margin-left: 25px;
+    color: deepskyblue;
 }

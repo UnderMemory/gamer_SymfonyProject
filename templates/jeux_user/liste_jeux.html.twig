@@ -9,16 +9,18 @@
         <div class="neon-bar mt-5"></div>
     </div>
 
-    <div class="jeux">
-        {% for jeu in jeux %}
-            <div class="jeu">
-                {{ jeu.nom }}
-                {{ jeu.description }}
-                {{ jeu.photo }}
-                {{ jeu.note }}
-                <a href={{ path('user_add_jeux', {'id': jeu.id}) }} class="jeu-lien">Noter ce jeu</a>
-            </div>
-        {% endfor %}
+    <div class="container">
+        <div class="jeux">
+            {% for jeu in jeux %}
+                <div class="jeu">
+                    {{ jeu.nom }}
+                    {{ jeu.description }}
+                    {{ jeu.photo }}
+                    {{ jeu.note }}
+                    <a href={{ path('user_add_jeux', {'id': jeu.id}) }} class="jeu-lien">Noter ce jeu</a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 
