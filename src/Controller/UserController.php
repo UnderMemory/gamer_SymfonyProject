@@ -4,20 +4,33 @@ namespace App\Controller;
 
 use App\Entity\JeuxUser;
 use App\Entity\User;
+use App\Form\RegistrationFormType;
 use App\Form\UserJeuxType;
 use App\Form\UserType;
 use App\Repository\JeuxRepository;
 use App\Repository\JeuxUserRepository;
 use App\Repository\UserRepository;
+use App\Security\EmailVerifier;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 
 class UserController extends AbstractController
 {
+
+    private $emailVerifier;
+
+    public function __construct(EmailVerifier $emailVerifier)
+    {
+        $this->emailVerifier = $emailVerifier;
+    }
 
     /**
      * @Route("/user/", name="user_index", methods={"GET"})
