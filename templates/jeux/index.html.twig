@@ -24,7 +24,7 @@
                         <td class="game-list-liens my-5">
                             <a class="game-list-lien" href="{{ path('jeux_show', {'id': jeux.id}) }}">Détails</a>
                             <a class="game-list-lien" href="{{ path('jeux_edit', {'id': jeux.id}) }}">Modifier</a>
-                           {% if is_granted('ROLE_USER') %} <button class="game-list-lien" onClick="addToList({{ jeux.id }})">Ajouter à ma liste</button> {% endif %}
+                           {% if is_granted('ROLE_USER') %} <button onClick="addToList({{ jeux.id }})">Ajouter à ma liste</button> {% endif %}
                         </td>
                     </tr>
 
