@@ -43,6 +43,10 @@ body {
     color: rgba(0,255,236,1) !important;
 }
 
+.btn-liste {
+    text-decoration: none;
+}
+
 .btn-list:hover {
     background-color: rgba(0,255,236,1);
     color: #1b1e21 !important;
@@ -130,7 +134,14 @@ body {
 
 .edit-body {
     margin-top: 100px;
+    margin-bottom: 100px;
     color: lightcyan;
+}
+
+.game-list-lien {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid lightcyan;
 }
 
 /* Formulaire */
