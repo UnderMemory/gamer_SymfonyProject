@@ -186,10 +186,8 @@ body {
 /* Page de liste personnelle */
 
 .jeux {
-    font-size: 42px;
+    font-size: 28px;
     color: lightcyan;
     margin: auto;
-    font-family: 'Tourney', cursive;
-    text-align: center;
     margin-top: 50px;
 }
